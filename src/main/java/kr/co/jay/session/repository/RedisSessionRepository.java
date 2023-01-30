@@ -1,4 +1,4 @@
-package kr.co.everon.session.repository;
+package kr.co.jay.session.repository;
 
 import java.util.List;
 import lombok.RequiredArgsConstructor;

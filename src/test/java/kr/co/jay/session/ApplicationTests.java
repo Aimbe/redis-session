@@ -1,4 +1,4 @@
-package kr.co.everon.session;
+package kr.co.jay.session;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

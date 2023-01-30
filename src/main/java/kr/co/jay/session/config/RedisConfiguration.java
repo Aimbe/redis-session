@@ -1,4 +1,4 @@
-package kr.co.everon.session.config;
+package kr.co.jay.session.config;
 
 import io.lettuce.core.dynamic.annotation.Value;
 import lombok.RequiredArgsConstructor;

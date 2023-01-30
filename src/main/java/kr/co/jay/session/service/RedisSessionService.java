@@ -1,20 +1,15 @@
-package kr.co.everon.session.service;
+package kr.co.jay.session.service;
 
 import java.util.Map;
-import kr.co.everon.session.exception.BadRequestException;
-import kr.co.everon.session.exception.InternalErrorException;
-import kr.co.everon.session.exception.NotFoundException;
-import kr.co.everon.session.repository.RedisSession;
-import kr.co.everon.session.repository.RedisSessionRepository;
+import kr.co.jay.session.exception.BadRequestException;
+import kr.co.jay.session.exception.NotFoundException;
+import kr.co.jay.session.repository.RedisSession;
+import kr.co.jay.session.repository.RedisSessionRepository;
 import lombok.RequiredArgsConstructor;
 import net.minidev.json.JSONObject;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
-import org.springframework.http.RequestEntity;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 

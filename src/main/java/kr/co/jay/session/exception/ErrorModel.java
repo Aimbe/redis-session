@@ -1,4 +1,4 @@
-package kr.co.everon.session.exception;
+package kr.co.jay.session.exception;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;

@@ -1,4 +1,4 @@
-package kr.co.everon.session.config;
+package kr.co.jay.session.config;
 
 import io.netty.channel.ChannelOption;
 import io.netty.handler.timeout.ReadTimeoutHandler;

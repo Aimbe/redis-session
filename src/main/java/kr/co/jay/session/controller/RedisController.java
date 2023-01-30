@@ -1,20 +1,13 @@
-package kr.co.everon.session.controller;
+package kr.co.jay.session.controller;
 
-import io.lettuce.core.RedisClient;
-import io.lettuce.core.api.StatefulRedisConnection;
-import io.lettuce.core.api.sync.RedisCommands;
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Map;
-import kr.co.everon.session.repository.RedisSession;
-import kr.co.everon.session.repository.RedisSessionRepository;
-import kr.co.everon.session.service.RedisSessionService;
+import kr.co.jay.session.repository.RedisSession;
+import kr.co.jay.session.repository.RedisSessionRepository;
+import kr.co.jay.session.service.RedisSessionService;
 import lombok.RequiredArgsConstructor;
 import net.minidev.json.JSONObject;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.core.ValueOperations;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -61,7 +54,7 @@ public class RedisController {
 	}
 
 
-    /*    @PostMapping("/save-session-moongg")
+    /*    @PostMapping("/")
     public void saveMoongg() {
         String clientId;
         String ip;
@@ -69,7 +62,7 @@ public class RedisController {
         String ip2 = "777.888.999.666";
         LocalDateTime currentDateTime;
 
-        RedisClient redisClient = RedisClient.create("redis://Everon$20222023$@redis.everon.co.kr:6379/");
+        RedisClient redisClient = RedisClient.create("redis://pw@localhost.com/");
         StatefulRedisConnection<String, String> connection = redisClient.connect();
         RedisCommands<String, String> syncCommands = connection.sync();
         try {
@@ -80,7 +73,6 @@ public class RedisController {
                 currentDateTime = LocalDateTime.now();
 
                 syncCommands.hset(clientId, "ipAddress", ip);
-                syncCommands.hset(clientId, "insertBy", "moongg");
                 syncCommands.hset(clientId, "createdAt", currentDateTime.toString());
             }
         } catch (Exception e){
@@ -90,9 +82,9 @@ public class RedisController {
         }
     }
 
-    @GetMapping("/session-moongg/{clientId}/{ipAddress}")
+    @GetMapping("")
     public String  FindClientId(@PathVariable String clientId, @PathVariable String ipAddress) {
-        RedisClient redisClient = RedisClient.create("redis://Everon$20222023$@redis.everon.co.kr:6379/");
+        RedisClient redisClient = RedisClient.create("");
         StatefulRedisConnection<String, String> connection = redisClient.connect();
         RedisCommands<String, String> syncCommands = connection.sync();
 
