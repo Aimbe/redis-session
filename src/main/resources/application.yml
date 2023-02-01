@@ -8,3 +8,10 @@ spring:
     host: localhost:8080
     port: 6379
     password: ''
+
+
+    # application.yml
+    fcm:
+      key:
+        path: gjgs-fcm.json
+        scope: https://www.googleapis.com/auth/cloud-platform
