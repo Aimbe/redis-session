@@ -1,7 +1,12 @@
 package kr.co.jay.session.controller;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Map;
+
+import io.lettuce.core.RedisClient;
+import io.lettuce.core.api.StatefulRedisConnection;
+import io.lettuce.core.api.sync.RedisCommands;
 import kr.co.jay.session.repository.RedisSession;
 import kr.co.jay.session.repository.RedisSessionRepository;
 import kr.co.jay.session.service.RedisSessionService;
@@ -54,8 +59,8 @@ public class RedisController {
 	}
 
 
-    /*    @PostMapping("/")
-    public void saveMoongg() {
+        @PostMapping("/save")
+    public void save() {
         String clientId;
         String ip;
         String ip1 = "111.222.333.444";
@@ -89,6 +94,6 @@ public class RedisController {
         RedisCommands<String, String> syncCommands = connection.sync();
 
         return syncCommands.hget(clientId, ipAddress);
-    }*/
+    }
 
 }

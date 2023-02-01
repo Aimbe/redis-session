@@ -19,7 +19,7 @@ public class BadRequestException extends RuntimeException {
 	public BadRequestException() {
 		ErrorModel error = new ErrorModel();
 		error.setStatus(400);
-		error.setMessage("연결되어 있지 않은 충전기입니다. ");
+		error.setMessage("연결되어 있지 않은 상태입니다. ");
 		error.setError(String.valueOf(HttpStatus.BAD_REQUEST));
 		error.setTimestamp(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss").format(LocalDateTime.now(ZoneId.of("Asia/Seoul"))));
 		this.error = error;
