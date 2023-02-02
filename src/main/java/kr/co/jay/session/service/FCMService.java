@@ -55,7 +55,7 @@ public class FCMService {
 
         List<Message> messages = tokenList.stream().map(token -> Message.builder()
                 .putData("time", LocalDateTime.now().toString())
-                .setNotification(new Notification("제목", "알림 내용"))
+                //.setNotification(new Notification("제목", "알림 내용"))
                 .setToken(token)
                 .build()).collect(Collectors.toList());
 
