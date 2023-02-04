@@ -10,11 +10,12 @@ spring:
     password: ''
 
 
+
     # application.yml
     fcm:
       key:
-        path: gjgs-fcm.json
-        scope: https://www.googleapis.com/auth/cloud-platform
+        path: "gjgs-fcm.json"
+        scope: "https://www.googleapis.com/auth/cloud-platform"
 
 
         spring:
