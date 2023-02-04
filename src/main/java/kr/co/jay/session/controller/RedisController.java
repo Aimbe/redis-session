@@ -59,7 +59,7 @@ public class RedisController {
 	}
 
 
-        @PostMapping("/save")
+    @PostMapping("/save")
     public void save() {
         String clientId;
         String ip;

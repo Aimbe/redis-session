@@ -36,7 +36,6 @@ public class RedisSessionService {
 	public JSONObject callById(String clientId, Map<String, Object> resBody){
 
 		String url = redisSessionRepository.findSessionById(clientId).getAddress();
-		System.out.println("url = " + url);
 		if(url != null) {
 
 			url = "http://" + url;
