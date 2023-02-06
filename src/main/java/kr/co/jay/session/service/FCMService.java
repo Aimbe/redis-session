@@ -9,9 +9,12 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
+
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -45,6 +48,17 @@ public class FCMService {
             throw new RuntimeException(e.getMessage());
         }
     }
+
+
+    //token 형식 추가
+    private static String getAccessToken() throws IOException {
+        GoogleCredentials googleCredentials = GoogleCredentials
+                .fromStream(new FileInputStream("service-account.json"))
+                .createScoped(Arrays.asList(fireBaseScope));
+        googleCredentials.refreshAccessToken();
+        return googleCredentials.getAccessToken().getTokenValue();
+    }
+
 
 
     // 알림 보내기
