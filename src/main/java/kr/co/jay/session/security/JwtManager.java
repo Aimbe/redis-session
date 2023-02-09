@@ -13,6 +13,8 @@ import java.util.Date;
 import static java.util.stream.Collectors.toList;
 import static kr.api.security.Constants.EXPIRATION_TIME;
 import static kr.api.security.Constants.ROLE_CLAIM;
+import static kr.co.jay.session.security.Constants.EXPIRATION_TIME;
+import static kr.co.jay.session.security.Constants.ROLE_CLAIM;
 
 
 @Component
@@ -26,5 +28,17 @@ public class JwtManager {
     this.publicKey = publicKey;
   }
 
-
+  public String create(Member principal) {
+    final long now = System.currentTimeMillis();
+    return JWT.create()
+        .withIssuer("Modern API Development with Spring and Spring Boot")
+        .withSubject(principal.getUsername())
+        .withClaim(ROLE_CLAIM,
+            principal.getAuthorities().stream().map(GrantedAuthority::getAuthority)
+                .collect(toList()))
+        .withIssuedAt(new Date(now))
+        .withExpiresAt(new Date(now + EXPIRATION_TIME))
+        //.sign(Algorithm.HMAC512(SECRET_KEY.getBytes(StandardCharsets.UTF_8)));
+        .sign(Algorithm.RSA256(publicKey, privateKey));
+  }
 }
