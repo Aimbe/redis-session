@@ -35,16 +35,21 @@ dependencies {
 	// https://mvnrepository.com/artifact/com.google.firebase/firebase-admin
 	implementation 'com.google.firebase:firebase-admin:8.1.0'
 
-//	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa
+	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa
 	//implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.7.5'
-//
-//	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web
+
+ 	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web
 	implementation 'org.springframework.boot:spring-boot-starter-web:3.0.1'
 
 
 
 	// https://mvnrepository.com/artifact/org.mockito/mockito-junit-jupiter
 	testImplementation 'org.mockito:mockito-junit-jupiter:4.11.0'
+
+
+	// https://mvnrepository.com/artifact/org.springframework.security/spring-security-jwt
+	implementation 'org.springframework.security:spring-security-jwt:1.0.10.RELEASE'
+
 
 }
 
