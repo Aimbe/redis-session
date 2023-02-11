@@ -1,13 +1,15 @@
-# Foobar
+# session
 
-Foobar is a Python library for dealing with word pluralization.
+redis session 적용 & fcm 푸쉬 관리 단위 테스트 목적
+
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+설치 방법 
 
 ```bash
 pip install foobar
+형식
 ```
 
 ## Usage
@@ -34,4 +36,4 @@ Please make sure to update tests as appropriate.
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+[jayy](https://github.com/Aimbe/redis-session/edit/master/readme.md)
